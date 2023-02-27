@@ -1,0 +1,8 @@
+path: /home/yangzhe/superboao/yolohand  # dataset root dir
+train: /home/yangzhe/superboao/yolohand/train.txt  # train images (relative to 'path') 128 images
+val: /home/yangzhe/superboao/yolohand/val.txt  # val images (relative to 'path') 128 images
+test:  /home/yangzhe/superboao/yolohand/test.txt
+
+nc: 3  # number of classes
+names: ['hand', 'fin', 'sticker']  # class names
+
