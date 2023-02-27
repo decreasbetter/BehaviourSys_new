@@ -9,8 +9,8 @@ class Config():
     def __init__(self) -> None:
         
         self.meta = ['hand', 'hand', 'fin', 'sticker']  # 基元
-        self.spatial_relation = ['hand fin concate', 'hand fin concate', 'hand hand concate', 'hand hand depart', 'fin sticker depart']  # 基元间的空间交互规则，包括"交互"、"分离"
-        self.temporal_relation = [[0, 1], [2], [3, 4]]  # 基元间空间交互发生的时间顺序
+        self.spatial_relation = ['hand-fin-concate', 'hand-hand-concate', 'hand-hand-depart', 'fin-sticker-depart']  # 基元间的空间交互规则，包括"交互"、"分离"
+        self.temporal_relation = [[0], [1], [2, 3]]  # 基元间空间交互发生的时间顺序, 出现两个表示或关系
 
         self.model_type = 'yolov5'
         self.model_path = ''  # 检测模型权重路径

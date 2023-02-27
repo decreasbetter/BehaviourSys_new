@@ -2,7 +2,7 @@ import torch
 import numpy as np
 from collections import defaultdict
 
-from utils.util import objBBox
+from utils.util import objInfo
 from yoloV5.models.common import DetectMultiBackend
 from yoloV5.utils.augmentations import letterbox
 from yoloV5.utils.general import non_max_suppression, scale_coords
@@ -71,7 +71,7 @@ class Yolov5(DetectMultiBackend):
             # 基元归类
             for obj in pre:
                 cls = int(obj[5])  # 目标类别
-                obj_info = objBBox(obj[:4].astype(int))  # 目标框
+                obj_info = objInfo(obj[:4].astype(int))  # 目标框
 
                 meta_object[self.name[cls]].append(obj_info)
         return meta_object
