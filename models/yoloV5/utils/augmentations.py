@@ -9,8 +9,8 @@ import random
 import cv2
 import numpy as np
 
-from overLook.yoloV5.utils.general import LOGGER, check_version, colorstr, resample_segments, segment2box
-from overLook.yoloV5.utils.metrics import bbox_ioa
+from models.yoloV5.utils.general import LOGGER, check_version, colorstr, resample_segments, segment2box
+from models.yoloV5.utils.metrics import bbox_ioa
 
 
 class Albumentations:

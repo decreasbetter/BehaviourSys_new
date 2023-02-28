@@ -8,8 +8,8 @@ from copy import deepcopy
 import numpy as np
 import torch
 
-from overLook.yoloV5.utils.general import LOGGER, colorstr, emojis
-from overLook.yoloV5.utils.torch_utils import profile
+from models.yoloV5.utils.general import LOGGER, colorstr, emojis
+from models.yoloV5.utils.torch_utils import profile
 
 
 def check_train_batch_size(model, imgsz=640, amp=True):

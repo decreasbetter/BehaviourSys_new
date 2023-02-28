@@ -18,7 +18,7 @@ import torch.distributed as dist
 import torch.nn as nn
 import torch.nn.functional as F
 
-from overLook.yoloV5.utils.general import LOGGER, file_date, git_describe
+from models.yoloV5.utils.general import LOGGER, file_date, git_describe
 
 try:
     import thop  # for FLOPs computation

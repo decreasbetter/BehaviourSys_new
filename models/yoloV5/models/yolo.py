@@ -20,12 +20,12 @@ if str(ROOT) not in sys.path:
 if platform.system() != 'Windows':
     ROOT = Path(os.path.relpath(ROOT, Path.cwd()))  # relative
 
-from overLook.yoloV5.models.common import *
-from overLook.yoloV5.models.experimental import *
-from overLook.yoloV5.utils.autoanchor import check_anchor_order
-from overLook.yoloV5.utils.general import LOGGER, check_version, check_yaml, make_divisible, print_args
-from overLook.yoloV5.utils.plots import feature_visualization
-from overLook.yoloV5.utils.torch_utils import (fuse_conv_and_bn, initialize_weights, model_info, profile, scale_img, select_device,
+from models.yoloV5.models.common import *
+from models.yoloV5.models.experimental import *
+from models.yoloV5.utils.autoanchor import check_anchor_order
+from models.yoloV5.utils.general import LOGGER, check_version, check_yaml, make_divisible, print_args
+from models.yoloV5.utils.plots import feature_visualization
+from models.yoloV5.utils.torch_utils import (fuse_conv_and_bn, initialize_weights, model_info, profile, scale_img, select_device,
                                time_sync)
 
 try:

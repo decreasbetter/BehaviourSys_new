@@ -3,9 +3,15 @@ import numpy as np
 from collections import defaultdict
 
 from utils.util import objInfo
-from yoloV5.models.common import DetectMultiBackend
-from yoloV5.utils.augmentations import letterbox
-from yoloV5.utils.general import non_max_suppression, scale_coords
+from config import Config
+
+model_type = Config().model_type
+if model_type.lower() == 'yolov5':
+
+    from models.yoloV5.models.common import DetectMultiBackend
+    from models.yoloV5.utils.augmentations import letterbox
+    from models.yoloV5.utils.general import non_max_suppression, scale_coords
+    from models.yoloV5.utils.torch_utils import select_device
 
 
 """
@@ -17,12 +23,10 @@ from yoloV5.utils.general import non_max_suppression, scale_coords
 
 
 def make_model(cfg):
-    if cfg.model.lower() == 'yolov5':
-        from yoloV5.utils.torch_utils import select_device
+    if cfg.model_type.lower() == 'yolov5':
         device = select_device()
         model = Yolov5(cfg, device)
 
-    
     return model
 
 

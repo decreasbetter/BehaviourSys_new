@@ -8,8 +8,8 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-from overLook.yoloV5.models.common import Conv
-from overLook.yoloV5.utils.downloads import attempt_download
+from models.yoloV5.models.common import Conv
+from models.yoloV5.utils.downloads import attempt_download
 
 
 class Sum(nn.Module):
@@ -73,7 +73,7 @@ class Ensemble(nn.ModuleList):
 
 def attempt_load(weights, device=None, inplace=True, fuse=True):
     # Loads an ensemble of models weights=[a,b,c] or a single model weights=[a] or weights=a
-    from overLook.yoloV5.models.yolo import Detect, Model
+    from models.yoloV5.models.yolo import Detect, Model
 
     model = Ensemble()
     for w in weights if isinstance(weights, list) else [weights]:
