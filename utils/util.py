@@ -14,7 +14,7 @@ class objInfo():
     """
 
     def __init__(self, obj: list) -> None:
-        self.score = obj[5]
+        self.score = obj[4]
         left_top_x, left_top_y, right_bottom_x, right_bottom_y = obj[:4]
         self.left_top = np.array([left_top_x, left_top_y])  # 目标框的左上角坐标
         self.right_bottom = np.array([right_bottom_x, right_bottom_y])  # 目标框的右下角坐标

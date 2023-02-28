@@ -26,7 +26,8 @@ class Meta():
             
             # 判断当前的操作基元关系是否出现
             state = False
-            for meta_state in self.spatial_relation[state_idx]:
+            for idx in state_idx:
+                meta_state = self.spatial_relation[idx]
                 meta_state = meta_state.split('-')
                 for meta1 in meta_info[meta_state[0]]:
                     for meta2 in meta_info[meta_state[1]]:
