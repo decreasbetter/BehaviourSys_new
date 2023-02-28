@@ -23,6 +23,14 @@ if model_type.lower() == 'yolov5':
 
 
 def make_model(cfg):
+    """
+    每种检测模型返回的结果格式为: 
+    dict {
+          'class1':[objInfo1, objInfo2, ...]
+          'class2':[objInfo1, objInfo2, ...]
+          ...
+    }
+    """
     if cfg.model_type.lower() == 'yolov5':
         device = select_device()
         model = Yolov5(cfg, device)

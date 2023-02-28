@@ -11,6 +11,7 @@ class objInfo():
     """
     功能: 完成基元之间的空间交互信息判断
     输入: 基元检测结果, 如目标框坐标、置信度
+    return: objInfo class
     """
 
     def __init__(self, obj: list) -> None:
